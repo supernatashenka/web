@@ -35,6 +35,8 @@ public class ChromeSeleniumTest {
         driver = null;
     }
 
+
+
     @Test
     void shouldSubmitRequest() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иван Петров");
@@ -46,4 +48,8 @@ public class ChromeSeleniumTest {
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
 
     }
+
+
 }
+
+
