@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +8,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ChromeSeleniumTest {
     private WebDriver driver;
+    @BeforeAll
+
+    static void setUpAll() {System.setProperty("webDriver.chrome.driver", "./drivers/win/chromedriver.exe");
+    }
 
     @BeforeEach
     void SetUp() {
@@ -15,5 +20,13 @@ public class ChromeSeleniumTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.get(" http://localhost:7777/");
+    }
+
+    @AfterEach
+
+    void tearDown(){
+        driver.quit();
+        driver = null;
     }
 }
