@@ -1,4 +1,5 @@
-image: Ubuntu1804  # образ для сборки
+image: Ubuntu  # образ для сборки
+
 stack: jdk 11  # версия JDK
 
 branches:
@@ -12,5 +13,4 @@ install:
   - java -jar ./artifacts/app-order.jar &
 
 build_script:
-  - chmod +x gradlew
   - ./gradlew test --info  # запускаем тест, флаг --info позволяет выводить больше информации
