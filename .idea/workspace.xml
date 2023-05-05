@@ -75,7 +75,7 @@
       <recent name="C:\Users\HP\Desktop\netology\web\artifacts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ChromeSeleniumTest.shouldSubmitRequest">
+  <component name="RunManager" selected="Gradle.ChromeSeleniumTest.shouldSendForm">
     <configuration name="ChromeSeleniumTest.ShouldGetValidData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -90,6 +90,29 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ChromeSeleniumTest.ShouldGetValidData&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ChromeSeleniumTest.shouldSendForm" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ChromeSeleniumTest.shouldSendForm&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,6 +170,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ChromeSeleniumTest.shouldSendForm" />
         <item itemvalue="Gradle.ChromeSeleniumTest.shouldSubmitRequest" />
         <item itemvalue="Gradle.ChromeSeleniumTest.shouldTestSomething" />
         <item itemvalue="Gradle.ChromeSeleniumTest.ShouldGetValidData" />

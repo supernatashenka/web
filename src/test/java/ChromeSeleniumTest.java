@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class ChromeSeleniumTest {
     private WebDriver driver;
 
@@ -37,15 +38,15 @@ public class ChromeSeleniumTest {
 
 
     @Test
-    void shouldSubmitRequest() {
-        driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Иван Петров");
-        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79265555555");
+    void shouldSendForm() {
+
+        driver.findElement( By.cssSelector("[data-test-id=name] input")).sendKeys("Петров Николай");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79261234567");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
-        driver.findElement(By.className("button__content")).click();
-
-        String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
-
+        driver.findElement(By.className("button__text")).click();
+        String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
+        String actual = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
+        assertEquals(expected, actual);
     }
 }
 
